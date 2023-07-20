@@ -18,7 +18,10 @@ const reverseString = (s) => {
 // function to capitalize a string.
 const capitalize = (s) => {
   const scapital = s[0].toUpperCase() + s.slice(1);
-  return scapital;
+  if (typeof(scapital) === 'string') {
+    return scapital;
+  }
+  throw new Error('The given test case is not a string');
 };
 
 // class for simple calculator with add, subtract, divide and multiply.

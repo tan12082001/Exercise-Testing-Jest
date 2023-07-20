@@ -61,7 +61,20 @@ describe('String methods', () => {
     // Assert
     expect(stringcapital).toBe('Tanmayi');
   });
+
+  // if given string is not a string
+  test('Not string, throw error', () => {
+    // Arrange
+    const stringtest = 22;
+
+    // Act
+    // const stringcount = stringLength(stringtest);
+
+    // Asset
+    expect(() => capitalize(stringtest)).toThrow(Error);
+  });
 });
+
 // test cases for addition method
 describe('Addition method', () => {
   test('add 4 and 2', () => {
